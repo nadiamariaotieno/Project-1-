@@ -1,115 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clothing Store Form</title>
-</head>
-<body>
-  <h1>Online Clothing Store</h1>
-  <form action="submit_form.php" method="post" enctype="multipart/form-data">
-    <fieldset>
-      <legend>Customer Details</legend>
-      <p>
-        <label for="name">Name: </label>
-        <input type="text" id="name" name="name" placeholder="Enter your name" required>
-      </p>
-      <p>
-        <label for="email">Email: </label>
-        <input type="email" id="email" name="email" placeholder="Enter your email" required>
-      </p>
-      <p>
-        <label for="phone">Phone Number: </label>
-        <input type="tel" id="phone" name="phone" placeholder="e.g., +123456789">
-      </p>
-      <p>
-        <label for="password">Password: </label>
-        <input type="password" id="password" name="password" required>
-      </p>
-    </fieldset>
+<form method="post" action="process.php">
+  <fieldset>
+    <legend>Online Clothing Store</legend>
 
-    <fieldset>
-      <legend>Order Details</legend>
-      <p>
-        <label for="clothing-type">Clothing Type: </label>
-        <input type="radio" id="shirt" name="clothing-type" value="shirt">
-        <label for="shirt">Shirt</label>
-        <input type="radio" id="pants" name="clothing-type" value="pants">
-        <label for="pants">Pants</label>
-      </p>
-      <p>
-        <label for="size">Size: </label>
-        <input type="checkbox" id="small" name="size" value="small">
-        <label for="small">Small</label>
-        <input type="checkbox" id="medium" name="size" value="medium">
-        <label for="medium">Medium</label>
-        <input type="checkbox" id="large" name="size" value="large">
-        <label for="large">Large</label>
-      </p>
-      <p>
-        <label for="color">Choose a color: </label>
-        <input type="color" id="color" name="color" value="#000000">
-      </p>
-      <p>
-        <label for="quantity">Quantity: </label>
-        <input type="number" id="quantity" name="quantity" min="1" max="100" value="1">
-      </p>
-      <p>
-        <label for="delivery-date">Delivery Date: </label>
-        <input type="date" id="delivery-date" name="delivery-date">
-      </p>
-      <p>
-        <label for="delivery-time">Delivery Time: </label>
-        <input type="time" id="delivery-time" name="delivery-time">
-      </p>
-      <p>
-        <label for="preferred-datetime">Preferred Date & Time: </label>
-        <input type="datetime-local" id="preferred-datetime" name="preferred-datetime">
-      </p>
-      <p>
-        <label for="delivery-month">Preferred Delivery Month: </label>
-        <input type="month" id="delivery-month" name="delivery-month">
-      </p>
-      <p>
-        <label for="delivery-week">Preferred Delivery Week: </label>
-        <input type="week" id="delivery-week" name="delivery-week">
-      </p>
-      <p>
-        <label for="range">Discount Range: </label>
-        <input type="range" id="range" name="range" min="0" max="50" value="25">
-      </p>
-      <p>
-        <input type="hidden" name="order_id" value="12345">
-      </p>
-    </fieldset>
+    <p>
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" />
+    </p>
 
-    <fieldset>
-      <legend>Additional Information</legend>
-      <p>
-        <label for="comments">Comments: </label>
-        <input type="text" id="comments" name="comments" placeholder="Add any additional notes">
-      </p>
-      <p>
-        <label for="attachment">Upload Design: </label>
-        <input type="file" id="attachment" name="attachment">
-      </p>
-      <p>
-        <label for="website">Website (optional): </label>
-        <input type="url" id="website" name="website" placeholder="https://example.com">
-      </p>
-      <p>
-        <label for="search">Search for items: </label>
-        <input type="search" id="search" name="search" placeholder="e.g., jackets">
-      </p>
-      <p>
-        <input type="image" src="submit-button.png" alt="Submit" width="100">
-      </p>
-      <p>
-        <input type="button" value="Click Me" onclick="alert('Button clicked!')">
-        <input type="reset" value="Reset">
-        <input type="submit" value="Submit Order">
-      </p>
-    </fieldset>
-  </form>
-</body>
-</html>
+    <p>
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" />
+    </p>
+
+    <p>
+      <label for="password">Password:</label>
+      <input type="password" name="password" id="password" />
+    </p>
+
+    <p>
+      <label for="phone">Phone:</label>
+      <input type="tel" name="phone" id="phone" />
+    </p>
+
+    <p>
+      <label for="size">Size:</label>
+      <input type="checkbox" name="size" value="Small" /> Small
+      <input type="checkbox" name="size" value="Medium" /> Medium
+      <input type="checkbox" name="size" value="Large" /> Large
+    </p>
+
+    <p>
+      <label for="color">Favorite Color:</label>
+      <input type="color" name="color" id="color" />
+    </p>
+
+    <p>
+      <label for="quantity">Quantity:</label>
+      <input type="number" name="quantity" id="quantity" />
+    </p>
+
+    <p>
+      <label for="delivery-date">Delivery Date:</label>
+      <input type="date" name="delivery_date" id="delivery-date" />
+    </p>
+
+    <p>
+      <label for="image">Upload Design:</label>
+      <input type="file" name="image" id="image" />
+    </p>
+
+    <p>
+      <label for="comments">Comments:</label>
+      <input type="text" name="comments" id="comments" />
+    </p>
+
+    <p>
+      <input type="reset" value="Reset" />
+      <input type="submit" value="Submit" />
+    </p>
+  </fieldset>
+</form>
