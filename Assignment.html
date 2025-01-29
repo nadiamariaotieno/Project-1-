@@ -4,88 +4,132 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>USIU Advanced Web Development Evaluation Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
+            background-color: #f8f9fa;
             font-family: Arial, sans-serif;
-            margin: 20px;
+        }
+        .container {
+            max-width: 600px;
+            background: white;
             padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 30px auto;
         }
-        fieldset {
-            border: 1px solid #ccc;
-            padding: 20px;
-        }
-        legend {
-            font-size: 1.3em;
-            font-weight: bold;
-        }
-        label {
-            font-weight: bold;
-            display: block;
-            margin: 10px 0 5px;
-        }
-        input, textarea, select {
+        .form-control, .form-select {
             width: 100%;
-            padding: 8px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
         }
-        input[type="radio"] {
+        .form-check {
+            margin-left: 15px;
+        }
+        .btn-submit {
             width: auto;
-            margin-right: 10px;
-        }
-        input[type="file"] {
-            border: none;
+            padding: 8px 20px;
+            font-size: 14px;
+            display: block;
+            margin: 0 auto;
         }
     </style>
 </head>
 <body>
 
-    <h1>USIU Advanced Web Development Evaluation Form</h1>
+<div class="container">
+    <h3 class="text-center">USIU Advanced Web Development Evaluation Form</h3>
+    <form>
+        <div class="mb-3">
+            <label class="form-label">Full Name:</label>
+            <input type="text" class="form-control" placeholder="Enter your full name">
+        </div>
 
-    <form action="process.php" method="post" enctype="multipart/form-data">
-        <fieldset>
-            <label for="full-name">Full Name:</label>
-            <input type="text" id="full-name" name="full_name" placeholder="Enter your full name" required>
+        <div class="mb-3">
+            <label class="form-label">Student ID:</label>
+            <input type="text" class="form-control" placeholder="Enter your USIU Student ID">
+        </div>
 
-            <label for="student-id">Student ID:</label>
-            <input type="text" id="student-id" name="student_id" placeholder="Enter your USIU Student ID" required>
+        <div class="mb-3">
+            <label class="form-label">USIU Email Address:</label>
+            <input type="email" class="form-control" placeholder="Enter your USIU email">
+        </div>
 
-            <label for="email">USIU Email Address:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your USIU email" required>
+        <div class="mb-3">
+            <label class="form-label">GitHub Profile URL:</label>
+            <input type="url" class="form-control" placeholder="Enter your GitHub profile URL">
+        </div>
 
-            <label for="github">GitHub Profile URL:</label>
-            <input type="url" id="github" name="github" placeholder="Enter your GitHub profile URL">
+        <div class="mb-3">
+            <label class="form-label">Local Phone Number (WhatsApp-enabled):</label>
+            <input type="tel" class="form-control" placeholder="+2547XX-XXX-XXX">
+        </div>
 
-            <label for="phone">Local Phone Number (WhatsApp-enabled):</label>
-            <input type="tel" id="phone" name="phone" placeholder="+2547XX-XXX-XXX">
+        <div class="mb-3">
+            <label class="form-label">1. Nairobi-Specific Problem Solving:</label>
+            <textarea class="form-control" rows="2" placeholder="Describe your API security and scalability solution for Nairobi matatu integration"></textarea>
+        </div>
 
-            <label for="problem-solving">1. Nairobi-Specific Problem Solving:</label>
-            <textarea id="problem-solving" name="problem_solving" rows="3" placeholder="Describe your API security and scalability solution for Nairobi matatu integration"></textarea>
-
-            <label for="framework">2. Select the best JavaScript framework for real-time Nairobi news aggregation:</label>
-            <select id="framework" name="framework">
-                <option value="React.js">React.js</option>
-                <option value="Vue.js">Vue.js</option>
-                <option value="Angular">Angular</option>
+        <div class="mb-3">
+            <label class="form-label">2. Select the best JavaScript framework for real-time Nairobi news aggregation:</label>
+            <select class="form-select">
+                <option selected>React.js</option>
+                <option>Vue.js</option>
+                <option>Angular</option>
             </select>
+        </div>
 
-            <label>3. Which Laravel optimization method is best for a Nairobi e-commerce startup?</label>
-            <input type="radio" id="caching" name="laravel_optimization" value="Database Caching">
-            <label for="caching">Database Caching</label>
+        <div class="mb-3">
+            <label class="form-label">3. Which Laravel optimization method is best for a Nairobi e-commerce startup?</label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="laravelOptimization">
+                <label class="form-check-label">Database Caching</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="laravelOptimization">
+                <label class="form-check-label">Queues & Job Scheduling</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="laravelOptimization">
+                <label class="form-check-label">Horizontal Scaling</label>
+            </div>
+        </div>
 
-            <input type="radio" id="queues" name="laravel_optimization" value="Queues & Job Scheduling">
-            <label for="queues">Queues & Job Scheduling</label>
+        <div class="mb-3">
+            <label class="form-label">4. Upload a link to a past web project (PDF/Screenshot):</label>
+            <input type="file" class="form-control">
+        </div>
 
-            <input type="radio" id="scaling" name="laravel_optimization" value="Horizontal Scaling">
-            <label for="scaling">Horizontal Scaling</label>
+        <div class="mb-3">
+            <label class="form-label">5. Select a Kenyan hosting provider that supports M-Pesa payments:</label>
+            <select class="form-select">
+                <option selected>Safaricom Cloud</option>
+                <option>HostPoa</option>
+                <option>Truehost</option>
+            </select>
+        </div>
 
-            <label for="project-upload">4. Upload a link to a past web project (PDF/Screenshot):</label>
-            <input type="file" id="project-upload" name="project_upload" accept=".pdf,.png,.jpg,.jpeg">
+        <div class="mb-3">
+            <label class="form-label">6. How would you optimize a web app for Nairobi users on 2G/3G networks?</label>
+            <textarea class="form-control" rows="2" placeholder="Explain using PWA, lazy loading, and CDN strategies"></textarea>
+        </div>
 
-            <input type="submit" value="Submit">
-        </fieldset>
+        <div class="mb-3">
+            <label class="form-label">7. Name two Kenyan tech startups actively hiring full-stack developers:</label>
+            <input type="text" class="form-control" placeholder="Example: Cellulant, Twiga Foods">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">8. Name two Kenyan freelancing platforms for web developers besides Upwork/Fiverr:</label>
+            <input type="text" class="form-control" placeholder="Example: Kuhustle, WorkPay Africa">
+        </div>
+
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input">
+            <label class="form-check-label">I certify that all responses are original and not AI-generated.</label>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-submit">Submit Form</button>
     </form>
+</div>
 
 </body>
 </html>
