@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USIU Advanced Web Development Evaluation Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        fieldset {
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+        legend {
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="radio"] {
+            width: auto;
+            margin-right: 10px;
+        }
+        input[type="file"] {
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>USIU Advanced Web Development Evaluation Form</h1>
+
+    <form action="process.php" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <label for="full-name">Full Name:</label>
+            <input type="text" id="full-name" name="full_name" placeholder="Enter your full name" required>
+
+            <label for="student-id">Student ID:</label>
+            <input type="text" id="student-id" name="student_id" placeholder="Enter your USIU Student ID" required>
+
+            <label for="email">USIU Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your USIU email" required>
+
+            <label for="github">GitHub Profile URL:</label>
+            <input type="url" id="github" name="github" placeholder="Enter your GitHub profile URL">
+
+            <label for="phone">Local Phone Number (WhatsApp-enabled):</label>
+            <input type="tel" id="phone" name="phone" placeholder="+2547XX-XXX-XXX">
+
+            <label for="problem-solving">1. Nairobi-Specific Problem Solving:</label>
+            <textarea id="problem-solving" name="problem_solving" rows="3" placeholder="Describe your API security and scalability solution for Nairobi matatu integration"></textarea>
+
+            <label for="framework">2. Select the best JavaScript framework for real-time Nairobi news aggregation:</label>
+            <select id="framework" name="framework">
+                <option value="React.js">React.js</option>
+                <option value="Vue.js">Vue.js</option>
+                <option value="Angular">Angular</option>
+            </select>
+
+            <label>3. Which Laravel optimization method is best for a Nairobi e-commerce startup?</label>
+            <input type="radio" id="caching" name="laravel_optimization" value="Database Caching">
+            <label for="caching">Database Caching</label>
+
+            <input type="radio" id="queues" name="laravel_optimization" value="Queues & Job Scheduling">
+            <label for="queues">Queues & Job Scheduling</label>
+
+            <input type="radio" id="scaling" name="laravel_optimization" value="Horizontal Scaling">
+            <label for="scaling">Horizontal Scaling</label>
+
+            <label for="project-upload">4. Upload a link to a past web project (PDF/Screenshot):</label>
+            <input type="file" id="project-upload" name="project_upload" accept=".pdf,.png,.jpg,.jpeg">
+
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+
+</body>
+</html>
