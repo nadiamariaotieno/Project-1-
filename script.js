@@ -1,15 +1,26 @@
-let student = {
-  firstName: "John",
-  lastName: "Doe",
-  age: 21,
-  course: "Computer Science"
-};
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Variables</title>
+</head>
+<body>
+    <h1>JavaScript Variables</h1>
+    <h2>Creating a Variable</h2>
+    <p id="demo"></p>
 
-// Logging the 'student' object to the console
-console.log(student);
+    <script>
+        // Create a Variable:
+        let student = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 21,
+            course: "Computer Science"
+        };
 
-// Accessing properties of the 'student' object
-console.log("First Name: " + student.firstName);
-console.log("Last Name: " + student.lastName);
-console.log("Age: " + student.age);
-console.log("Course: " + student.course);
+        // Display Student information
+        document.getElementById("demo").innerHTML = 
+            "Student: " + student.firstName + " " + student.lastName + 
+            ", Age: " + student.age + ", Course: " + student.course;
+    </script>
+</body>
+</html>
